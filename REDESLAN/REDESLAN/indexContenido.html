@@ -74,31 +74,29 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/logo.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="img/icono.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">REDES</h1>
+      <h1 class="sitename">REDES LAN</h1>
     </a>
 
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="home.html" class="active"><i class="bi bi-house-fill navicon"></i> Home</a></li>
-        <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
-        <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
-        <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
-        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
-        <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
-        <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
+        <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
+        <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
+        <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos TCP/IP</a></li>
+        <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
       </ul>
     </nav>
-
-
+    
   </header>
-
   <main class="main">
 
     
@@ -147,7 +145,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -219,24 +217,48 @@
     <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>¿Qué es una Red LAN?</h2>
-        <p>Una Red de Área Local (LAN, por sus siglas en inglés) conecta dispositivos dentro de una misma área
-          geográfica, como una oficina, edificio o campus. Permite compartir recursos como archivos, impresoras y
-          acceso a Internet de manera eficiente y rápida.</p>
-      </div><!-- End Section Title -->
+        <center>
+          <h2>¿Qué es una red LAN?</h2>
+          <p style="font-size: 20px;">Una red LAN (Local Area Network) es una red de comunicación de datos que conecta dispositivos dentro de un área geográfica limitada, 
+            como una casa, una oficina o un campus universitario.</p>
+        </center>
+<br><br>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <!-- Video sobre Red LAN -->
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <video width="500" height="300" controls autoplay>
-          <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4"video/mp4">
-          Tu navegador no soporta el elemento de video.
-        </video>
-      </div>
+          <video controls style="width: 50%; height: auto; margin-left: 25%;">
+            <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+          </video>
+        </div>
+      </section>
+
+      <!-- Características Section -->
+<section id="caracteristicas" class="caracteristicas section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+
+      <h2>Características de una Red LAN</h2>
+      <p style="font-size: 20px;">Las redes LAN tienen diversas características que las hacen esenciales para la comunicación y el intercambio de datos dentro de un área local.</p>
+  </div>
+  <br><br>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <ul style="font-size: 18px; list-style-type: disc; margin-left: 50px;">
+      <li>Alcance limitado a una pequeña área geográfica, como una casa, oficina o campus.</li>
+      <li>Alta velocidad de transmisión de datos, normalmente en el rango de 1 Gbps o superior.</li>
+      <li>Conexión de dispositivos a través de cables o de forma inalámbrica (Wi-Fi).</li>
+      <li>Facilidad para compartir recursos como impresoras, archivos y conexiones a Internet.</li>
+      <li>Requiere de un equipo centralizado como un switch o router para la interconexión de los dispositivos.</li>
+      <li>Normalmente no requiere de un proveedor de servicios externo.</li>
+    </ul>
+  </div>
+</section>
       
-      <!-- Dynamic Content -->
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <section id="caracteristicas" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+          <!-- Dynamic Content -->
         <div class="row gy-4 align-items-center">
-          <h3 style="text-align: center;">¿Por qué elegir una Red LAN?</h3>
+          <h3 style="text-align: center;">Características</h3>
           <div class="col-lg-4">
             <div class="card custom-card" data-aos="fade-left">
               <div class="card-body">
@@ -280,9 +302,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
+    </div>
+</section>
 
     <style>
       .animated-img {
@@ -350,6 +371,23 @@
         });
       });
 
+      document.addEventListener("DOMContentLoaded", function() {
+        // Obtén la URL actual
+        const currentUrl = window.location.pathname;
+      
+        // Obtén todos los enlaces en el menú
+        const links = document.querySelectorAll('.navitem');
+      
+        // Itera a través de los enlaces y compara su href con la URL actual
+        links.forEach(link => {
+          if (link.href.includes(currentUrl)) {
+            link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+          } else {
+            link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+          }
+        });
+      });
+      
     </script>
 
     <!-- About Section -->
