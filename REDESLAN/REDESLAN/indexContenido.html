@@ -51,6 +51,9 @@
   <!-- Icon Font Stylesheet -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 
   <!-- Libraries Stylesheet -->
   <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -89,7 +92,7 @@
         <li><a href="home.html" class="navitem"><i class="bi bi-house-fill navicon"></i> Home</a></li>
         <li><a href="indexContenido.html" class="navitem"><i class="bi bi-router navicon"></i> ¿Qué es una Red LAN?</a></li>
         <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
-        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos TCP/IP</a></li>
+        <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
         <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
         <li><a href="Juegos.html" class="navitem"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
         <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
@@ -232,78 +235,75 @@
         </div>
       </section>
 
-      <!-- Características Section -->
-<section id="caracteristicas" class="caracteristicas section">
+ <!-- Características Section -->
+<section id="caracteristicas" class="caracteristicas section"  style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-
       <h2>Características de una Red LAN</h2>
-      <p style="font-size: 20px;">Las redes LAN tienen diversas características que las hacen esenciales para la comunicación y el intercambio de datos dentro de un área local.</p>
   </div>
-  <br><br>
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <ul style="font-size: 18px; list-style-type: disc; margin-left: 50px;">
-      <li>Alcance limitado a una pequeña área geográfica, como una casa, oficina o campus.</li>
-      <li>Alta velocidad de transmisión de datos, normalmente en el rango de 1 Gbps o superior.</li>
-      <li>Conexión de dispositivos a través de cables o de forma inalámbrica (Wi-Fi).</li>
-      <li>Facilidad para compartir recursos como impresoras, archivos y conexiones a Internet.</li>
-      <li>Requiere de un equipo centralizado como un switch o router para la interconexión de los dispositivos.</li>
-      <li>Normalmente no requiere de un proveedor de servicios externo.</li>
-    </ul>
-  </div>
-</section>
-      
 
-      <section id="caracteristicas" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-          <!-- Dynamic Content -->
-        <div class="row gy-4 align-items-center">
-          <h3 style="text-align: center;">Características</h3>
-          <div class="col-lg-4">
-            <div class="card custom-card" data-aos="fade-left">
-              <div class="card-body">
-                <div class="card-face card-front">
-                  <i class="bi bi-lightning-charge text-warning"></i>
-                  <h5 class="card-title">Conexión rápida y de bajo costo</h5>
-                </div>
-                <div class="card-face card-back">
-                  <p class="card-text">Redes LAN ofrecen una alta velocidad de transmisión de datos a un costo
-                    accesible, ideal para pequeñas y medianas empresas.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card custom-card" data-aos="fade-left" data-aos-delay="200">
-              <div class="card-body">
-                <div class="card-face card-front">
-                  <i class="bi bi-wrench text-primary"></i>
-                  <h5 class="card-title">Fácil administración y mantenimiento</h5>
-                </div>
-                <div class="card-face card-back">
-                  <p class="card-text">La infraestructura de una red LAN es fácil de gestionar y mantener, con
-                    soluciones rápidas y accesibles para resolver problemas.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card custom-card" data-aos="fade-left" data-aos-delay="300">
-              <div class="card-body">
-                <div class="card-face card-front">
-                  <i class="bi bi-arrow-repeat text-success"></i>
-                  <h5 class="card-title">Escalabilidad para agregar más dispositivos</h5>
-                </div>
-                <div class="card-face card-back">
-                  <p class="card-text">Las redes LAN permiten agregar más dispositivos conforme crece tu empresa,
-                    asegurando una expansión eficiente y sin complicaciones.</p>
-                </div>
-              </div>
-            </div>
+  <!-- Carrusel -->
+  <div id="carouselCaracterísticas" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="100">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Alcance limitado a una pequeña área geográfica, como una casa, oficina o campus.</p>
           </div>
         </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Alta velocidad de transmisión de datos, normalmente en el rango de 1 Gbps o superior.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Conexión de dispositivos a través de cables o de forma inalámbrica (Wi-Fi).</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Facilidad para compartir recursos como impresoras, archivos y conexiones a Internet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Requiere de un equipo centralizado como un switch o router para la interconexión de los dispositivos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container">
+          <div class="carousel-text">
+            <p>Normalmente no requiere de un proveedor de servicios externo.</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- Controles del carrusel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaracterísticas" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaracterísticas" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </section>
+
+
+      
+
+    
 
     <style>
       .animated-img {
@@ -390,17 +390,17 @@
       
     </script>
 
-    <!-- About Section -->
+    <!-- About Section 
     <section id="about" class="about section">
 
-      <!-- Section Title -->
+
       <div class="container section-title" data-aos="fade-up">
         <h2>¿Qué es una Dirección IP y una Máscara de Subred?</h2>
         <p>Una <strong>dirección IP</strong> es un número único que identifica a cada dispositivo en una red, como una
           computadora, teléfono o impresora. Es similar a la dirección de una casa, pero en el mundo digital. Por otro
           lado, la <strong>máscara de subred</strong> es una herramienta que ayuda a dividir una red en partes más
           pequeñas, permitiendo organizar y gestionar de forma eficiente las conexiones entre los dispositivos.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -438,7 +438,7 @@
         </div>
 
       </div>
-    </section><!-- /About Section -->
+    </section>-->
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section light-background">
@@ -446,7 +446,7 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Componentes de una Red LAN</h2>
-    <p>Explora los componentes esenciales que conforman una red LAN, desde routers hasta switches, firewalls y más. Estos
+    <p style="font-size: 20px;">Explora los componentes esenciales que conforman una red LAN, desde routers hasta switches, firewalls y más. Estos
       elementos son la columna vertebral de cualquier red eficiente, asegurando seguridad, velocidad y conectividad.</p>
   </div><!-- End Section Title -->
 
@@ -463,28 +463,29 @@
 
       <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-        <!-- Portfolio Item 1 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Router 1</h4>
-                <p>Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</p>
-                <a href="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+                <!-- Portfolio Item 2 -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="portfolio-content h-100">
+                  <div class="image-container">
+                    <img src="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <h4>Router 1</h4>
+                      <div class="portfolio-description">Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas. </div>
+                      <a href="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
 
         <!-- Portfolio Item 2 -->
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/fibra_optica.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Cable-Fibra Optica</h4>
-                <p>Medio de transmisión que utiliza hilos de vidrio o plástico para enviar datos como pulsos de luz.</p>
+                <div class="portfolio-description">Medio de transmisión que utiliza hilos de vidrio o plástico para enviar datos como pulsos de luz. </div>
                 <a href="assets/img/portfolio/fibra_optica.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -496,9 +497,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/Centros de datos de Google.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Servidor 1</h4>
-                <p>Es una computadora o sistema que ofrece servicios, recursos o datos a otras computadoras (clientes) en una red.</p>
+                <div class="portfolio-description">Es una computadora o sistema que ofrece servicios, recursos o datos a otras computadoras (clientes) en una red. </div>
                 <a href="assets/img/portfolio/Centros de datos de Google.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -510,9 +511,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="./assets/img/portfolio/firewall2.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Firewall 1</h4>
-                <p>Es un dispositivo de seguridad de red que controla el tráfico de entrada y salida según reglas de seguridad preestablecidas.</p>
+                <div class="portfolio-description">Es un dispositivo de seguridad de red que controla el tráfico de entrada y salida según reglas de seguridad preestablecidas. </div>
                 <a href="./assets/img/portfolio/firewall2.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -524,9 +525,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/Quiero la wi-fi que funcione bien en toda de la casa.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Router 2</h4>
-                <p>Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</p>
+                <div class="portfolio-description">Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</div>
                 <a href="assets/img/portfolio/Quiero la wi-fi que funcione bien en toda de la casa.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -538,9 +539,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/ethernet1.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Cable-Ethernet</h4>
-                <p>Es un tipo de cable utilizado para conectar dispositivos a una red mediante cables de cobre.</p>
+                <div class="portfolio-description">Es un tipo de cable utilizado para conectar dispositivos a una red mediante cables de cobre</div>
                 <a href="assets/img/portfolio/ethernet1.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -552,9 +553,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/Rack.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Servidor 2</h4>
-                <p>Puede alojar sitios web, bases de datos, o aplicaciones, y generalmente está optimizado para manejar grandes volúmenes de información.</p>
+                <div class="portfolio-description">Puede alojar sitios web, bases de datos, o aplicaciones, y generalmente está optimizado para manejar grandes volúmenes de información y proporcionar acceso a múltiples usuarios de forma simultánea.</div>
                 <a href="assets/img/portfolio/Rack.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -568,9 +569,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Switch</h4>
-                <p>Es un dispositivo de red que conecta múltiples dispositivos dentro de una red local (LAN).</p>
+                <div class="portfolio-description">Es un dispositivo de red que conecta múltiples dispositivos dentro de una red local (LAN)</div>
                 <a href="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -582,9 +583,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/portfolio/ethernet2.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Cable-Ethernet</h4>
-                <p>Transmite datos a través de señales eléctricas. Los cables más comunes son el Cat5e y Cat6.</p>
+                <div class="portfolio-description">Transmite datos a través de señales eléctricas. Los cables más comunes son el Cat5e y Cat6.</div>
                 <a href="assets/img/portfolio/ethernet2.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -596,9 +597,9 @@
           <div class="portfolio-content h-100">
             <div class="image-container">
               <img src="assets/img/computadoras.jpg" class="img-fluid" alt="">
-              <div class="overlay">
+              <div class="portfolio-info">
                 <h4>Computadora</h4>
-                <p>Una computadora de red proporciona la capacidad de acceder a la red, gestionar el tráfico de datos y conectarse a servidores y otros dispositivos de la red.</p>
+                <div class="portfolio-description">Dispositivo electrónico que procesa, almacena y recupera datos. Se utiliza para realizar tareas como navegación en la web, procesamiento de texto, cálculos y ejecución de programas. </div>
                 <a href="assets/img/computadoras.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
@@ -612,48 +613,7 @@
 </section><!-- End Portfolio Section -->
 
 <style>
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .image-container:hover .overlay {
-    opacity: 1;
-  }
-
-  .overlay h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .overlay p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .portfolio-info a {
-    font-size: 1.5rem;
-    color: #fff;
-  }
-
-  .portfolio-info a:hover {
-    color: #f39c12;
-  }
+  
 </style>
 
 
@@ -661,174 +621,250 @@
     <!-- Sección de Guía de Instalación Mejorada -->
 <section id="packet-tracer" class="packet-tracer section bg-gray-100 p-6 rounded-lg shadow-lg">
   <!-- Título de la Sección con Imagen -->
-  <div class="container section-title text-center" data-aos="fade-up">
-    <img src="img/cisco1.png" alt="Logo Cisco" class="mx-auto mb-4 w-24 h-24">
-    <h2 class="text-3xl font-bold text-blue-800">Guía Detallada de Instalación de Cisco Packet Tracer</h2>
-    <p class="text-gray-700 mt-2">Descubre cómo descargar, instalar y configurar Cisco Packet Tracer paso a paso en tu sistema operativo. ¡Comencemos!</p>
-  </div>
-
-  <!-- Paso 1: Crear una cuenta en Cisco NetAcad con Icono -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="100">
-    <div class="flex items-center mb-4">
-      <img src="img/netacad.png" alt="NetAcad Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 1: Crear una cuenta en Cisco Networking Academy (NetAcad)</h3>
+  <header class="bg-primary text-white text-center py-4">
+    <div class="container">
+      <h1>Guía completa para instalar Cisco Packet Tracer</h1>
+      <p class="lead">Descubre cómo descargar, instalar y configurar Cisco Packet Tracer paso a paso en tu sistema operativo. ¡Comencemos!</p>
     </div>
-    <p class="text-gray-600">Antes de descargar Cisco Packet Tracer, necesitas crear una cuenta en NetAcad. Sigue estos pasos:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Visita <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</li>
-      <li>Haz clic en "Sign Up" o "Registrarse".</li>
-      <li>Completa el formulario con tus datos personales.</li>
-      <li>Acepta los términos y condiciones y verifica tu correo.</li>
-    </ol>
-  </div>
-
-  <!-- Paso 2: Descargar Cisco Packet Tracer con icono -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="200">
-    <div class="flex items-center mb-4">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 2: Descargar Cisco Packet Tracer</h3>
-    </div>
-    <p class="text-gray-600">Una vez que tengas tu cuenta NetAcad, sigue estos pasos para descargar Cisco Packet Tracer:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</li>
-      <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
-      <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
-    </ol>
-    <div class="mt-4">
-      <a href="https://www.netacad.com/portal/resources/packet-tracer" target="_blank" class="btn bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-800 transition ease-in-out duration-200">Descargar Cisco Packet Tracer</a>
-    </div>
-  </div>
-
-  <!-- Paso 3: Instalación en Windows -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
-    <div class="flex items-center mb-4">
-      <img src="img/windows.png" alt="Windows Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 3: Instalación en Windows</h3>
-    </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Cisco Packet Tracer en Windows:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Haz doble clic en el archivo <code>.exe</code> descargado.</li>
-      <li>Sigue las instrucciones del asistente de instalación.</li>
-      <li>Acepta los términos de licencia y selecciona la ubicación de instalación.</li>
-      <li>Espera a que finalice la instalación y haz clic en "Finalizar".</li>
-    </ol>
-    <p class="text-sm text-gray-500 mt-2"><b>Nota:</b> Si aparece una advertencia de seguridad, selecciona "Permitir" para continuar.</p>
-  </div>
-
-  <!-- Paso 4: Instalación en macOS -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="400">
-    <div class="flex items-center mb-4">
-      <img src="img/macOs.png" alt="macOS Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 4: Instalación en macOS</h3>
-    </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Cisco Packet Tracer en macOS:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Abre el archivo <code>.dmg</code> descargado y arrastra el ícono a "Aplicaciones".</li>
-      <li>Haz clic derecho en Packet Tracer y selecciona "Abrir".</li>
-      <li>Si ves una advertencia de seguridad, ve a "Preferencias" y selecciona "Abrir de todas formas".</li>
-    </ol>
-  </div>
-
-  <!-- Paso 5: Instalación en Linux -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="500">
-    <div class="flex items-center mb-4">
-      <img src="img/ubuntu.png" alt="Linux Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 5: Instalación en Linux (Ubuntu)</h3>
-    </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Packet Tracer en Linux:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Abre la terminal y navega a la carpeta de descargas.</li>
-      <li>Instala el archivo <code>.deb</code> con el comando <code>sudo dpkg -i</code>.</li>
-      <li>Corrige dependencias rotas con <code>sudo apt --fix-broken install</code>.</li>
-    </ol>
-  </div>
-
-  <!-- Paso 6: Primer Inicio -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
-    <div class="flex items-center mb-4">
-      <img src="img/start.jpg" alt="Start Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 6: Primer Inicio de Cisco Packet Tracer</h3>
-    </div>
-    <p class="text-gray-600">Después de la instalación, abre Cisco Packet Tracer y sigue estos pasos:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Inicia sesión con tu cuenta de NetAcad.</li>
-      <li>Explora la interfaz y comienza a simular redes.</li>
-    </ol>
-  </div>
-
-  <div class="container download-link" data-aos="fade-up" data-aos-delay="700">
-    <h4>Descarga Cisco Packet Tracer</h4>
-    <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL" target="_blank" class="btn btn-primary">Descargar Cisco Packet Tracer</a>
-  </div>
-</section>
-<!-- Services Section -->
-<section id="services" class="services section" style="position: relative;">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Ejemplo en Cisco Packet Tracer</h2>
-    <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
-      opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
-    <p><strong>DESARROLLO</strong></p>
-    <p><strong>IP del router:</strong> 192.168.1.0</p>
-    <p><strong>IP PC0:</strong> 192.168.1.2</p>
-    <p><strong>IP PC1:</strong> 192.168.1.3</p>
-
-    <!-- Botón para mostrar/ocultar el video -->
-    <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
-
-    <!-- Contenedor del video oculto por defecto -->
-    <div id="videoContainer" style="display: none; margin-top: 10px;">
-      <video width="600" controls>
-        <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-      </video>
-    </div>
-  </div><!-- End Section Title -->
-
+  </header>
+<br><br>
+ <!-- Resume Section -->
+ <section id="guia" class="resume section">
   <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div>
-          <h4 class="title"><a class="stretched-link">Componentes</a></h4>
-          <img src="./img/componentes.png" alt="Alta Velocidad" class="img-fluid service-img">
-        </div>
-      </div><!-- End Service Item -->
+    <div class="row" style="margin-top: -5%;">
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <h4 class="title"><a class="stretched-link">Esquema</a></h4>
-          <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
-        </div>
-      </div><!-- End Service Item -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">I. Crear una cuenta en Cisco Networking Academy (NetAcad):</h3>
+        <div class="resume-item">
+         <ol>
+            <li>Visita <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</strong></li>
+            <li>Haz clic en "Sign Up" o "Registrarse".</li>
+            <li>Completa el formulario con tus datos personales.</li>
+            <li>Acepta los términos y condiciones y verifica tu correo.</li>
+            </ol>
+        </div><!-- End Resume Item -->
+      </div>
+      
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div>
-          <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
-          <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
-        </div>
-      </div><!-- End Service Item -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">II. Descargar Cisco Packet Tracer</h3>
+        <div class="resume-item">
+          <ol>
+            <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</li>
+            <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
+            <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
+          </ol>
+        
+        </div><!-- Edn Resume Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
-          <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
+      <br><br><br>
+  <!-- Interactive Accordion -->
+<!-- Interactive Accordion -->
+<div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="accordion" id="securityAccordion">
+    
+    <!-- Item para Windows -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class="fab fa-windows me-2"></i>Instalación en Windows
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#securityAccordion">
+        <div class="accordion-body">
+          <ol>
+            <li>Descargue la versión de Packet Tracer que necesita.</li>
+            <a href="https://www.netacad.com/resources/lab-downloads?courseLang=en-US" target="_blank" download>
+              Packet Tracer 8.2.2 para Windows de 64 bits
+            </a>
+            <li>Inicie el programa de instalación de Packet Tracer.</li>
+            <li>Inicie Cisco Packet Tracer seleccionando el ícono apropiado.</li>
+            <li>Cuando se le solicite, haga clic en el botón verde Habilidades para todos para autenticarse.</li>
+            <li>Se iniciará Cisco Packet Tracer y estará listo para explorar sus funciones.</li>
+          </ol>
         </div>
-      </div><!-- End Service Item -->
+      </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración del CP0</a></h4>
-          <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
+    <!-- Item para MacOS -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class="fab fa-apple me-2"></i>Instalación en MacOS
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#securityAccordion">
+        <div class="accordion-body">
+          <ol>
+            <li>Descargue la versión de Packet Tracer que necesita.</li>
+            <a href="https://www.netacad.com/resources/lab-downloads?courseLang=en-US" target="_blank" download>
+              Packet Tracer 8.2.2 MacOS 64bit
+            </a>
+            <li>Inicie el programa de instalación de Packet Tracer.</li>
+            <li>Inicie Cisco Packet Tracer seleccionando el ícono apropiado.</li>
+            <li>Cuando se le solicite, haga clic en el botón verde Habilidades para todos para autenticarse.</li>
+            <li>Se iniciará Cisco Packet Tracer y estará listo para explorar sus funciones.</li>
+          </ol>
         </div>
-      </div><!-- End Service Item -->
+      </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración del CP1</a></h4>
-          <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
+    <!-- Item para Ubuntu -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class="fab fa-linux me-2"></i> Instalación en Ubuntu
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#securityAccordion">
+        <div class="accordion-body">
+          <ol>
+            <li>Descargue la versión de Packet Tracer que necesita.</li>
+            <a href="https://www.netacad.com/resources/lab-downloads?courseLang=en-US" target="_blank" download>
+              Packet Tracer 8.2.2 Ubuntu 64bit
+            </a>
+            <li>Inicie el programa de instalación de Packet Tracer.</li>
+            <li>Inicie Cisco Packet Tracer seleccionando el ícono apropiado.</li>
+            <li>Cuando se le solicite, haga clic en el botón verde Habilidades para todos para autenticarse.</li>
+            <li>Se iniciará Cisco Packet Tracer y estará listo para explorar sus funciones.</li>
+          </ol>
         </div>
-      </div><!-- End Service Item -->
+      </div>
     </div>
   </div>
+</div>
+
+</section>
+
+ <!-- <section id="caracteristicas" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+      
+        <div class="row gy-4 align-items-center">
+          <h3 style="text-align: center;">Características</h3>
+          <div class="col-lg-4">
+            <div class="card custom-card" data-aos="fade-left">
+              <div class="card-body">
+                <div class="card-face card-front">
+                  <i class="bi bi-lightning-charge text-warning"></i>
+                  <h5 class="card-title">Conexión rápida y de bajo costo</h5>
+                </div>
+                <div class="card-face card-back">
+                  <p class="card-text">Redes LAN ofrecen una alta velocidad de transmisión de datos a un costo
+                    accesible, ideal para pequeñas y medianas empresas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card custom-card" data-aos="fade-left" data-aos-delay="200">
+              <div class="card-body">
+                <div class="card-face card-front">
+                  <i class="bi bi-wrench text-primary"></i>
+                  <h5 class="card-title">Fácil administración y mantenimiento</h5>
+                </div>
+                <div class="card-face card-back">
+                  <p class="card-text">La infraestructura de una red LAN es fácil de gestionar y mantener, con
+                    soluciones rápidas y accesibles para resolver problemas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card custom-card" data-aos="fade-left" data-aos-delay="300">
+              <div class="card-body">
+                <div class="card-face card-front">
+                  <i class="bi bi-arrow-repeat text-success"></i>
+                  <h5 class="card-title">Escalabilidad para agregar más dispositivos</h5>
+                </div>
+                <div class="card-face card-back">
+                  <p class="card-text">Las redes LAN permiten agregar más dispositivos conforme crece tu empresa,
+                    asegurando una expansión eficiente y sin complicaciones.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- Services Section -->
+
+
+    <!-- Skills Section -->
+    <section id="services" class="skills section"
+      style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ejemplo en Cisco Packet Tracer</h2>
+        <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
+          opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
+        <p><strong>DESARROLLO</strong></p>
+        <p><strong>IP del router:</strong> 192.168.1.0</p>
+        <p><strong>IP PC0:</strong> 192.168.1.2</p>
+        <p><strong>IP PC1:</strong> 192.168.1.3</p>
+    
+        <!-- Botón para mostrar/ocultar el video -->
+        <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
+    
+        <!-- Contenedor del video oculto por defecto -->
+        <div id="videoContainer" style="display: none; margin-top: 10px;">
+          <video width="600" controls>
+            <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h4 class="title"><a class="stretched-link">Componentes</a></h4>
+              <img src="./img/componentes.png" alt="Alta Velocidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h4 class="title"><a class="stretched-link">Esquema</a></h4>
+              <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
+              <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
+              <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración del CP0</a></h4>
+              <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración del CP1</a></h4>
+              <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+      </div>
+      
+    </section><!-- /Skills Section -->
+
+
+  
 </section><!-- /Services Section -->
 
 <script>
@@ -1061,5 +1097,6 @@
       });
   });
     </script>
-  
+
+
 </html>
