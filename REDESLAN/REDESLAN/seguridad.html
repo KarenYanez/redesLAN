@@ -91,7 +91,7 @@
         <li><a href="Topologia.html" class="navitem"><i class="bi bi-diagram-3 navicon"></i> Topologías de red LAN</a></li>
         <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
         <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
-        <li><a href="Juegos.html" class="navitem"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
+        <li><a href="Juegos.html" class="navitem"><i class="bi bi-controller navicon"></i>Juegos</a></li>
         <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
       </ul>
     </nav>
@@ -103,7 +103,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -288,9 +288,10 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up">
           <div class="icon-container">
-            <i class="fas fa-network-wired fa-3x"></i>
+            <i class="fas fa-network-wired fa-3x" style="color: #3498db;"></i>
           </div>
-          <h5 class="block-title">Segmentación de Redes y VLANs</h5>
+          <h5 class="block-title" style="color: #3498db;">Segmentación de Redes y VLANs</h5>
+          <br>
           <p class="block-text">Divide tu red en subredes o VLANs para mejorar la seguridad y limitar el acceso a información sensible.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('segmentation')">Ver detalles</button>
           <div class="details-slide" id="segmentation">
@@ -303,9 +304,9 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up" data-aos-delay="100">
           <div class="icon-container">
-            <i class="fas fa-user-lock fa-3x"></i>
+            <i class="fas fa-user-lock fa-3x" style="color: #dbd334;"></i>
           </div>
-          <h5 class="block-title">Autenticación y Control de Acceso</h5>
+          <h5 class="block-title" style="color: #dbd334;">Autenticación y Control de Acceso</h5>
           <p class="block-text">Implementa autenticación fuerte y controla el acceso de los usuarios para garantizar la seguridad en tu red.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('authentication')">Ver detalles</button>
           <div class="details-slide" id="authentication">
@@ -318,9 +319,10 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up" data-aos-delay="200">
           <div class="icon-container">
-            <i class="fas fa-lock fa-3x"></i>
+            <i class="fas fa-lock fa-3x" style="color: #34db34;"></i>
           </div>
-          <h5 class="block-title">Cifrado de Datos</h5>
+          <h5 class="block-title" style="color: #34db34;">Cifrado de Datos</h5>
+          <br>
           <p class="block-text">Protege los datos mediante cifrado, asegurando que la información sensible esté segura, incluso si es interceptada.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('encryption')">Ver detalles</button>
           <div class="details-slide" id="encryption">
@@ -333,9 +335,10 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up" data-aos-delay="300">
           <div class="icon-container">
-            <i class="fas fa-shield-alt fa-3x"></i>
+            <i class="fas fa-shield-alt fa-3x" style="color: #9534db;"></i>
           </div>
-          <h5 class="block-title">Firewall y Filtrado de Paquetes</h5>
+          <h5 class="block-title" style="color: #9534db;">Firewall y Filtrado de Paquetes</h5>
+          <br>
           <p class="block-text">Usa firewalls y filtros de paquetes para proteger la red de accesos no deseados y ataques externos.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('firewall')">Ver detalles</button>
           <div class="details-slide" id="firewall">
@@ -348,9 +351,10 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up" data-aos-delay="400">
           <div class="icon-container">
-            <i class="fas fa-chart-line fa-3x"></i>
+            <i class="fas fa-chart-line fa-3x" style="color: #34dbd3;"></i>
           </div>
-          <h5 class="block-title">Monitoreo y Auditoría de la Red</h5>
+          <h5 class="block-title" style="color: #34dbd3;">Monitoreo y Auditoría de la Red</h5>
+          <br>
           <p class="block-text">Monitorea continuamente la red para detectar actividades sospechosas y realizar auditorías periódicas de seguridad.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('monitoring')">Ver detalles</button>
           <div class="details-slide" id="monitoring">
@@ -363,9 +367,9 @@
       <div class="col-lg-4">
         <div class="security-block" data-aos="fade-up" data-aos-delay="500">
           <div class="icon-container">
-            <i class="fas fa-user-shield fa-3x"></i>
+            <i class="fas fa-user-shield fa-3x" style="color: #db6c34;"></i>
           </div>
-          <h5 class="block-title">Protección contra Amenazas Internas</h5>
+          <h5 class="block-title" style="color: #db6c34;">Protección contra Amenazas Internas</h5>
           <p class="block-text">Implementa políticas para prevenir y detectar amenazas dentro de la red, como empleados o usuarios malintencionados.</p>
           <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('internal_threats')">Ver detalles</button>
           <div class="details-slide" id="internal_threats">
@@ -375,19 +379,6 @@
       </div>
 
       <!-- Block for Control de Acceso y Privilegios de Usuario -->
-      <div class="col-lg-4">
-        <div class="security-block" data-aos="fade-up" data-aos-delay="600">
-          <div class="icon-container">
-            <i class="fas fa-users-cog fa-3x"></i>
-          </div>
-          <h5 class="block-title">Control de Acceso y Privilegios de Usuario</h5>
-          <p class="block-text">Define roles y privilegios claros para cada usuario, limitando su acceso a solo lo necesario.</p>
-          <button class="btn btn-outline-primary btn-sm" onclick="toggleSlide('user_privileges')">Ver detalles</button>
-          <div class="details-slide" id="user_privileges">
-            <p>El control de acceso mediante políticas de privilegios mínimos (PoLP) garantiza que los usuarios solo tengan acceso a lo que necesitan para su trabajo.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
