@@ -528,3 +528,59 @@
     object-fit: cover;
   }
   
+  /* Contenedor de cada capa y su información (con flexbox horizontal) */
+  .layer-container {
+    display: flex; /* Alinea los elementos horizontalmente */
+    align-items: center; /* Centra la capa y el info-box verticalmente */
+    margin-bottom: 10px; /* Espacio entre las filas */
+    flex-direction: column;
+    position: relative;
+  }
+  
+  
+  
+/* Estilo del contenedor de la información */
+.info-box {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posición absoluta para que se pueda mover */
+    top: 0; /* Se alinea con la parte superior del botón */
+    left: 100%; /* Se coloca a la derecha del botón (100% de su ancho) */
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 130px; /* Puedes ajustar el ancho */
+    margin-left: 10px; /* Espacio entre el botón y el contenedor de información */
+    transition: all 0.3s ease; /* Suaviza la transición */
+
+
+  }
+  
+
+
+
+
+  
+  /* Estilo para los botones de protocolo */
+  .protocol-button {
+    background-color:#06BBCC ;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    transition: background-color 0.3s ease;
+  }
+  
+
+
+  
+  /* Mostrar la información al hacer clic */
+  .info-box.active {
+    display: block; /* Muestra el contenido cuando se hace clic */
+  }
+  
+
