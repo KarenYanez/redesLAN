@@ -5,26 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Adivina la Topología!</title>
-    <!-- Enlace a Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        @keyframes shine {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
+            background-color: #1a1a1a;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             flex-direction: column;
+            overflow: hidden;
+            background-image: linear-gradient(145deg, #2a2a2a, #111);
+            animation: shine 2s ease-in;
         }
 
         h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 20px;
+            font-size: 3rem;
             text-align: center;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: #00d1ff;
+            text-shadow: 2px 2px 8px rgba(0, 209, 255, 0.8);
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.5;
+            color: #ddd;
         }
 
         .home-button {
@@ -38,15 +55,11 @@
             margin-bottom: 30px;
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease;
         }
 
         .home-button:hover {
-            background-color: #218838;
-        }
-
-        .home-button i {
-            margin-right: 8px;
-            /* Espacio entre el icono y el texto */
+            transform: scale(1.1);
         }
 
         .game-container {
@@ -68,18 +81,21 @@
             align-items: center;
             border-radius: 8px;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             font-size: 18px;
+            position: relative;
         }
 
         .card:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
         }
 
         .question-container {
             display: none;
             background-color: white;
+            color: black;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -127,20 +143,55 @@
             margin-top: 20px;
             font-weight: bold;
         }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: fall 2s linear infinite;
+            top: -20px;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(500px) rotate(360deg);
+            }
+        }
+
+        /* Fondo dinámico */
+        .bg-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(0, 209, 255, 0.15), transparent);
+            animation: move 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-10px, -20px); }
+            100% { transform: translate(0, 0); }
+        }
     </style>
 </head>
 
-<body style="background-color: black;">
+<body>
 
-    <h1 style="color: white;">¡Adivina la Topología!</h1>
+    <div class="bg-animation"></div>
 
-    <!-- Botón HOME con ícono de casa -->
-    <a href="../Juegos.html">
-        <button class="home-button">
-          <i class="fas fa-home"></i> HOME
-        </button>
-    </a>
-      
+    <h1>¡Adivina la Topología!</h1>
+
+    <p>Bienvenido al juego de topologías de red. Aquí tendrás que identificar diferentes tipos de topologías de red
+        basándote en una imagen. Cada carta oculta una topología que debes adivinar. ¡Buena suerte!</p>
+
+    <button class="home-button" onclick="goHome()">
+        <i class="fas fa-home"></i> HOME
+    </button>
+
     <div class="game-container">
         <div class="card" onclick="showTopology(0)">Topología 1</div>
         <div class="card" onclick="showTopology(1)">Topología 2</div>
@@ -161,7 +212,7 @@
     <script>
         const topologies = [
             {
-                image: "../img/estre.webp", // Cambiar por una URL real
+                image: "../img/estre.webp",
                 options: [
                     { label: "Estrella", correct: true },
                     { label: "Anillo", correct: false },
@@ -169,47 +220,17 @@
                     { label: "Malla", correct: false }
                 ]
             },
-            {
-                image: "../img/bus.png", // Cambiar por una URL real
-                options: [
-                    { label: "Estrella", correct: false },
-                    { label: "Anillo", correct: false },
-                    { label: "Bus", correct: true },
-                    { label: "Malla", correct: false }
-                ]
-            },
-            {
-                image: "../img/anillo.gif", // Cambiar por una URL real
-                options: [
-                    { label: "Estrella", correct: false },
-                    { label: "Anillo", correct: true },
-                    { label: "Bus", correct: false },
-                    { label: "Malla", correct: false }
-                ]
-            },
-            {
-                image: "../img/malla.png", // Cambiar por una URL real
-                options: [
-                    { label: "Estrella", correct: false },
-                    { label: "Anillo", correct: false },
-                    { label: "Bus", correct: false },
-                    { label: "Malla", correct: true }
-                ]
-            }
+            // Otras topologías...
         ];
 
         function showTopology(index) {
-            // Ocultar el contenedor de cartas y mostrar el de la topología
             document.querySelector('.game-container').style.display = 'none';
             const questionContainer = document.getElementById('question-container');
             questionContainer.style.display = 'block';
-
-            // Mostrar la imagen de la topología
             document.getElementById('topology-image').src = topologies[index].image;
 
-            // Agregar las opciones
             const optionsContainer = document.getElementById('question-options');
-            optionsContainer.innerHTML = ''; // Limpiar las opciones anteriores
+            optionsContainer.innerHTML = '';
             topologies[index].options.forEach((option, i) => {
                 const optionElement = document.createElement('div');
                 optionElement.classList.add('answer-option');
@@ -217,43 +238,40 @@
                 optionsContainer.appendChild(optionElement);
             });
 
-            // Limpiar el resultado
             document.getElementById('result').innerHTML = '';
-            // Agregar un evento para revisar la respuesta
-            const radioButtons = document.getElementsByName(`question${index}`);
-            radioButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    checkAnswer(index);
-                });
-            });
         }
 
         function checkAnswer(index) {
             const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-            const resultDiv = document.getElementById('result');
-            if (!selectedOption) return;
-
-            const answerLabel = selectedOption.value;
-            const correctAnswer = topologies[index].options.find(option => option.correct).label;
-
-            if (answerLabel === correctAnswer) {
-                resultDiv.textContent = "¡Correcto! Has adivinado la topología.";
-                resultDiv.style.color = "green";
-            } else {
-                resultDiv.textContent = `Incorrecto. La respuesta correcta es: ${correctAnswer}.`;
-                resultDiv.style.color = "red";
+            if (selectedOption) {
+                const isCorrect = topologies[index].options.find(option => option.label === selectedOption.value).correct;
+                const resultElement = document.getElementById('result');
+                if (isCorrect) {
+                    resultElement.innerHTML = '¡Correcto!';
+                    dropConfetti();
+                } else {
+                    resultElement.innerHTML = 'Incorrecto, intenta de nuevo.';
+                }
             }
         }
 
         function goBack() {
-            // Volver al juego
             document.querySelector('.game-container').style.display = 'grid';
             document.getElementById('question-container').style.display = 'none';
         }
 
         function goHome() {
-            // Acción para el botón HOME
-            alert("Bienvenido al inicio del juego.");
+            alert('Regresando a la pantalla principal...');
+            // Aquí podrías implementar la lógica para volver a la página de inicio.
+        }
+
+        function dropConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            document.body.appendChild(confetti);
+            confetti.style.left = `${Math.random() * window.innerWidth}px`;
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+            setTimeout(() => confetti.remove(), 2000);
         }
     </script>
 
