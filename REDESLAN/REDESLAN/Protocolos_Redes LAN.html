@@ -102,7 +102,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -417,129 +417,240 @@
     details.style.display = details.style.display === 'none' ? 'block' : 'none';
   }
 </script>
-
-<!-- Cuestionario Interactivo -->
-<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
+<!-- Cuestionario Interactivo Mejorado -->
+<section id="quiz" class="quiz section light-background" style="background-color:#f4f4f4; padding: 20px; min-height: 100vh;">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Cuestionario: Adivina el Protocolo de Red</h2>
-    <p>Te daremos una descripción de un protocolo de red. ¡Adivina cuál es! Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
+    <h2 style="text-align: center; font-size: 32px; color: #2c3e50;">Cuestionario: Protocolos de Redes LAN</h2>
+    <p style="text-align: center;">Selecciona la opción correcta para cada pregunta sobre protocolos de redes LAN.</p>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div id="quizContainer">
-      <div class="container">
-        <h1>Adivina el Protocolo de Red</h1>
-        <p class="description">Te daremos una descripción de un protocolo de red. ¡Adivina cuál es!</p>
+  <div class="quiz-container" data-aos="fade-up" data-aos-delay="100">
+    <div id="quizContainer" style="max-width: 700px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+      <h1 style="text-align: center; font-size: 24px; color: #333;">Protocolos de Redes LAN</h1>
 
-        <p id="protocol-description"></p>
+      <form id="quizForm">
+        <div class="question" style="margin-bottom: 15px;">
+          <p style="font-size: 18px;">1. ¿Cuál es el protocolo más utilizado en redes LAN cableadas?</p>
+          <ol type="1" style="padding-left: 20px;">
+            <li><label><input type="radio" name="q1" value="Ethernet"> Ethernet</label></li>
+            <li><label><input type="radio" name="q1" value="Wi-Fi"> Wi-Fi</label></li>
+            <li><label><input type="radio" name="q1" value="TCP/IP"> TCP/IP</label></li>
+          </ol>
+        </div>
 
-        <input type="text" id="user-answer" placeholder="Escribe tu respuesta aquí...">
-        <button onclick="checkAnswer()">Adivinar</button>
+        <div class="question" style="margin-bottom: 15px;">
+          <p style="font-size: 18px;">2. ¿Qué protocolo traduce nombres de dominio en direcciones IP?</p>
+          <ol type="1" style="padding-left: 20px;">
+            <li><label><input type="radio" name="q2" value="TCP"> TCP</label></li>
+            <li><label><input type="radio" name="q2" value="DNS"> DNS</label></li>
+            <li><label><input type="radio" name="q2" value="SNMP"> SNMP</label></li>
+          </ol>
+        </div>
 
-        <p class="result" id="result"></p>
+        <div class="question" style="margin-bottom: 15px;">
+          <p style="font-size: 18px;">3. ¿Qué protocolo permite la comunicación inalámbrica en redes LAN?</p>
+          <ol type="1" style="padding-left: 20px;">
+            <li><label><input type="radio" name="q3" value="Wi-Fi"> Wi-Fi</label></li>
+            <li><label><input type="radio" name="q3" value="Ethernet"> Ethernet</label></li>
+            <li><label><input type="radio" name="q3" value="ARP"> ARP</label></li>
+          </ol>
+        </div>
+
+        <div class="question" style="margin-bottom: 15px;">
+          <p style="font-size: 18px;">4. ¿Qué conjunto de protocolos gestiona la transmisión de datos en redes IP?</p>
+          <ol type="1" style="padding-left: 20px;">
+            <li><label><input type="radio" name="q4" value="TCP/IP"> TCP/IP</label></li>
+            <li><label><input type="radio" name="q4" value="DHCP"> DHCP</label></li>
+            <li><label><input type="radio" name="q4" value="ICMP"> ICMP</label></li>
+          </ol>
+        </div>
+      </form>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button class="btn btn-primary" onclick="checkAnswers()">Ver Resultado</button>
+        <button class="btn btn-secondary" onclick="resetQuiz()">Reiniciar Cuestionario</button>
+        <button class="btn btn-info" id="showAnswersBtn" onclick="showCorrectAnswers()" style="display: none;">Mostrar Respuestas</button>
       </div>
 
       <!-- Resultado Final -->
-      <div id="finalResult" style="display: none; margin-top: 20px;">
-        <h3>¡Felicidades! Completaste el juego.</h3>
-        <p>Tu calificación final es: <span id="score">0</span>/5.</p>
+      <div id="finalResult" style="display: none; margin-top: 20px; opacity: 0; transition: opacity 0.6s ease;">
+        <h3 style="text-align: center; color: #2ecc71;">¡Felicidades! Completaste el cuestionario.</h3>
+        <p style="text-align: center;">Tu calificación final es: <span id="score" style="font-weight: bold;">0/4</span>.</p>
+        <p id="feedback" style="text-align: center;"></p>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .quiz-container {
+    padding: 40px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+
+  .btn-primary {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+
+  .btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+    transform: scale(1.05);
+  }
+
+  .btn-info {
+    background-color: #2ecc71;
+    color: white;
+  }
+
+  .btn-info:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  #finalResult {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .correct-answer {
+    color: #2ecc71;
+    font-weight: bold;
+  }
+
+  .wrong-answer {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+</style>
+
 <script>
-  const protocols = [
-    {
-      description: "Este protocolo se utiliza para la comunicación a través de cables de cobre o fibra óptica en una red LAN.",
-      answer: "Ethernet"
-    },
-    {
-      description: "Este protocolo permite la comunicación inalámbrica en redes LAN mediante ondas de radio.",
-      answer: "Wi-Fi"
-    },
-    {
-      description: "Este protocolo se utiliza para convertir direcciones IP en direcciones MAC dentro de una red local.",
-      answer: "ARP"
-    },
-    {
-      description: "Este protocolo es utilizado para asignar direcciones IP de manera automática a los dispositivos conectados a la red.",
-      answer: "DHCP"
-    },
-    {
-      description: "Este protocolo se utiliza para la resolución de nombres de dominio en direcciones IP, facilitando la navegación web.",
-      answer: "DNS"
-    }
-  ];
+function checkAnswers() {
+  const answers = {
+    q1: "Ethernet",
+    q2: "DNS",
+    q3: "Wi-Fi",
+    q4: "TCP/IP"
+  };
 
-  let currentProtocolIndex = 0;
   let score = 0;
+  let totalQuestions = Object.keys(answers).length;
 
-  // Function to display the description of the current protocol
-  function displayDescription() {
-    const protocol = protocols[currentProtocolIndex];
-    document.getElementById('protocol-description').textContent = protocol.description;
-    document.getElementById('result').textContent = ''; // Clear the result text for new question
-  }
-
-  // Function to check the user's answer
-  function checkAnswer() {
-    const userAnswer = document.getElementById('user-answer').value.trim().toLowerCase();
-    const correctAnswer = protocols[currentProtocolIndex].answer.toLowerCase();
-    const result = document.getElementById('result');
-
-    // Check if the user's answer is correct
-    if (userAnswer === correctAnswer) {
-      result.textContent = "¡Correcto! ¡Bien hecho!";
-      result.className = "result correct";
-      score++;
-    } else {
-      result.textContent = `La respuesta correcta es: ${protocols[currentProtocolIndex].answer}`;
-      result.className = "result incorrect"; // Show the correct answer after wrong attempt
-    }
-
-    // Wait before moving to the next question (2 seconds)
-    setTimeout(() => {
-      currentProtocolIndex++; // Move to the next question
-      if (currentProtocolIndex < protocols.length) {
-        displayDescription(); // Show next description
-      } else {
-        // Show the final result after all questions are answered
-        setTimeout(() => {
-          document.getElementById('finalResult').style.display = 'block';
-          document.getElementById('score').textContent = score;
-        }, 1000);
-      }
-    }, 2000); // Wait for 2 seconds before showing the next question
-
-    document.getElementById('user-answer').value = ''; // Clear input field
-  }
-
-  // Initial call to display the first protocol description
-  displayDescription();
-
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Obtén la URL actual
-    const currentUrl = window.location.pathname;
-  
-    // Obtén todos los enlaces en el menú
-    const links = document.querySelectorAll('.navitem');
-  
-    // Itera a través de los enlaces y compara su href con la URL actual
-    links.forEach(link => {
-      if (link.href.includes(currentUrl)) {
-        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
-      } else {
-        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
-      }
-    });
+  // Bloquear las opciones después de verificar
+  const radios = document.querySelectorAll('input[type="radio"]');
+  radios.forEach(radio => {
+    radio.disabled = true; // Deshabilitar opciones
   });
-  
-</script>
 
+  for (let key in answers) {
+    const selected = document.querySelector(`input[name="${key}"]:checked`);
+    if (selected) {
+      if (selected.value === answers[key]) {
+        score++;
+        selected.parentElement.classList.add("correct-answer");
+      } else {
+        selected.parentElement.classList.add("wrong-answer");
+      }
+    }
+  }
+
+  document.getElementById("score").textContent = `${score}/${totalQuestions}`;
+  const finalResult = document.getElementById("finalResult");
+  finalResult.style.display = "block";
+  setTimeout(() => {
+    finalResult.style.opacity = "1";
+  }, 100);
+
+  let feedbackText;
+  if (score === totalQuestions) {
+    feedbackText = "¡Excelente! Has respondido correctamente todas las preguntas.";
+  } else if (score >= totalQuestions / 2) {
+    feedbackText = "¡Buen trabajo! Pero puedes mejorar en algunas preguntas.";
+  } else {
+    feedbackText = "Sigue practicando para mejorar tus conocimientos.";
+  }
+
+  document.getElementById("feedback").textContent = feedbackText;
+
+  // Mostrar el botón "Mostrar Respuestas"
+  document.getElementById("showAnswersBtn").style.display = "inline-block";
+}
+
+function resetQuiz() {
+  document.getElementById("quizForm").reset();
+  document.getElementById("finalResult").style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById("finalResult").style.display = "none";
+  }, 600);
+  const correctAnswers = document.querySelectorAll(".correct-answer, .wrong-answer");
+  correctAnswers.forEach(answer => {
+    answer.classList.remove("correct-answer", "wrong-answer");
+  });
+
+  // Reactivar las opciones
+  const radios = document.querySelectorAll('input[type="radio"]');
+  radios.forEach(radio => {
+    radio.disabled = false;
+  });
+
+  document.getElementById("showAnswersBtn").style.display = "none"; // Ocultar el botón de mostrar respuestas
+}
+
+function showCorrectAnswers() {
+  const answers = {
+    q1: "Ethernet",
+    q2: "DNS",
+    q3: "Wi-Fi",
+    q4: "TCP/IP"
+  };
+
+  for (let key in answers) {
+    const correctAnswer = answers[key];
+    const correctOption = document.querySelector(`input[name="${key}"][value="${correctAnswer}"]`);
+    if (correctOption) {
+      correctOption.parentElement.classList.add("correct-answer");
+    }
+  }
+}
+</script>
 
 
 
