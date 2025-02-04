@@ -104,7 +104,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -181,6 +181,190 @@
           </video>
         </div>
       </section>
+
+      <!-- Título del cuestionario -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Aprende Jugando</h2>
+  <p>
+    Este cuestionario de selección está diseñado para que puedas aprender sobre redes LAN mientras juegas. No importa qué nota saques, lo importante es que obtendrás una explicación por cada pregunta, ya sea que respondas correctamente o no. ¡Diviértete aprendiendo!
+  </p>
+  <!-- Botón para empezar el cuestionario -->
+  <div class="text-center mt-4">
+    <button id="startQuizBtn" class="btn btn-primary">Aprendamos Jugando</button>
+  </div>
+</div>
+
+<!-- Cuestionario escondido por defecto -->
+<div id="quizFormContainer" class="container" data-aos="fade-up" style="display: none;">
+  <form id="quizForm">
+    <div id="questionContainer"></div> <!-- Contenedor de las preguntas dinámicas -->
+    <div class="text-center mt-4">
+      <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Siguiente</button>
+      <button id="submitQuizBtn" class="btn btn-success" style="display: none;">Enviar Cuestionario</button>
+      <button id="showAnswersBtn" class="btn btn-info" style="display: none;">Mostrar Respuestas</button>
+    </div>
+  </form>
+</div>
+
+<!-- Modal para mostrar la calificación final -->
+<div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scoreModalLabel">Calificación Final</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="finalScoreText"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para mostrar todas las respuestas -->
+<div class="modal fade" id="answersModal" tabindex="-1" aria-labelledby="answersModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="answersModalLabel">Tus Respuestas y las Correctas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="answersList"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Array de preguntas, respuestas, imágenes y videos
+    const qaArray = [
+      {
+        question: "¿Qué es una red LAN?",
+        options: ["Una red que conecta dispositivos en un área local", "Una red que conecta redes de área amplia", "Una red que conecta diferentes continentes", "Una red que no tiene cables"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Cuál es la principal ventaja de una red LAN?",
+        options: ["Compartir recursos como archivos e impresoras", "Conectar a Internet más rápido", "Conectar diferentes redes LAN entre sí", "Permitir acceso a Internet sin restricción"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Qué dispositivos se usan comúnmente en una red LAN?",
+        options: ["Computadoras, switches e impresoras", "Satélites y antenas", "Routers y repetidores", "Ninguna de las anteriores"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Cómo se conecta una red LAN?",
+        options: ["Mediante cables Ethernet o Wi-Fi", "Mediante satélites", "Con cables de fibra óptica siempre", "Con señales de radio"],
+        correctIndex: 0
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    const answers = []; // Array para almacenar las respuestas seleccionadas
+
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const quizFormContainer = document.getElementById('quizFormContainer');
+    const questionContainer = document.getElementById('questionContainer');
+    const finalScoreText = document.getElementById('finalScoreText');
+    const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+    const submitQuizBtn = document.getElementById('submitQuizBtn');
+    const showAnswersBtn = document.getElementById('showAnswersBtn');
+    const answersList = document.getElementById('answersList');
+
+    // Iniciar el cuestionario
+    startQuizBtn.addEventListener('click', function () {
+      startQuizBtn.style.display = 'none';
+      quizFormContainer.style.display = 'block';
+      showQuestion(currentQuestionIndex);
+    });
+
+    // Mostrar pregunta y opciones enumeradas
+    function showQuestion(index) {
+      const currentQA = qaArray[index];
+      questionContainer.innerHTML = `
+        <div class="container section-title">
+          <h2>${currentQA.question}</h2>
+        </div>
+        <ul id="optionList" class="list-group">
+          ${currentQA.options.map((option, i) => `
+            <li class="list-group-item option" data-index="${i}">
+              <input type="radio" name="question${index}" value="${i}"> ${i + 1}. ${option}
+            </li>
+          `).join('')}
+        </ul>
+      `;
+
+      nextQuestionBtn.style.display = index < qaArray.length - 1 ? 'block' : 'none';
+      submitQuizBtn.style.display = index === qaArray.length - 1 ? 'block' : 'none';
+    }
+
+    // Botón Siguiente para pasar a la siguiente pregunta
+    nextQuestionBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      currentQuestionIndex++;
+      showQuestion(currentQuestionIndex);
+    });
+
+    // Enviar el cuestionario y calcular la calificación
+    submitQuizBtn.addEventListener('click', function (event) {
+      event.preventDefault(); // Evita la recarga de la página
+      calculateScore();
+      showAnswersBtn.style.display = 'block'; // Mostrar el botón "Mostrar Respuestas" después de enviar el cuestionario
+    });
+
+    // Calcular la calificación final
+    function calculateScore() {
+      score = 0; // Reiniciar el puntaje
+      qaArray.forEach((qa, index) => {
+        if (answers[index] === qa.correctIndex) {
+          score++;
+        }
+      });
+
+      showFinalScore();
+    }
+
+    // Mostrar la calificación final
+    function showFinalScore() {
+      const totalQuestions = qaArray.length;
+      const percentageScore = (score / totalQuestions) * 100;
+      finalScoreText.innerHTML = `<p>Tu calificación final es ${percentageScore}% (${score} de ${totalQuestions} preguntas correctas).</p>`;
+      const scoreModal = new bootstrap.Modal(document.getElementById('scoreModal'));
+      scoreModal.show();
+    }
+
+    // Capturar la opción seleccionada para cada pregunta
+    document.addEventListener('change', function (event) {
+      if (event.target.matches('input[type="radio"]')) {
+        const questionIndex = parseInt(event.target.name.replace('question', ''), 10);
+        answers[questionIndex] = parseInt(event.target.value, 10);
+      }
+    });
+
+    // Mostrar todas las respuestas seleccionadas y las correctas
+    showAnswersBtn.addEventListener('click', function (event) {
+      event.preventDefault(); // Evita que el botón recargue la página
+      let answersHTML = '<ul>';
+      qaArray.forEach((qa, index) => {
+        const userAnswerIndex = answers[index];
+        const userAnswer = userAnswerIndex !== undefined ? qa.options[userAnswerIndex] : 'No respondida';
+        const correctAnswer = qa.options[qa.correctIndex];
+        const isCorrect = userAnswerIndex === qa.correctIndex ? 'Correcta' : 'Incorrecta';
+        
+        answersHTML += `
+          <li><strong>Pregunta ${index + 1}:</strong> ${qa.question}<br>
+            <strong>Tu respuesta:</strong> ${userAnswer} (${isCorrect})<br>
+            <strong>Respuesta correcta:</strong> ${correctAnswer}
+          </li><br>`;
+      });
+      answersHTML += '</ul>';
+
+      answersList.innerHTML = answersHTML;
+      const answersModal = new bootstrap.Modal(document.getElementById('answersModal'));
+      answersModal.show(); // Mostrar el modal de respuestas
+    });
+  });
+</script>
 
  <!-- Características Section -->
 <section id="caracteristicas" class="caracteristicas section"  style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
