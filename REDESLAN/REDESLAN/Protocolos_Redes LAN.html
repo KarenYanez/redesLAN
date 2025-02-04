@@ -494,127 +494,94 @@
   }
 </script>
 
-<!-- Cuestionario Interactivo -->
-<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Cuestionario: Adivina el Protocolo de Red</h2>
-    <p>Te daremos una descripción de un protocolo de red. ¡Adivina cuál es! Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div id="quizContainer">
-      <div class="container">
-        <h1>Adivina el Protocolo de Red</h1>
-        <p class="description">Te daremos una descripción de un protocolo de red. ¡Adivina cuál es!</p>
-
-        <p id="protocol-description"></p>
-
-        <input type="text" id="user-answer" placeholder="Escribe tu respuesta aquí...">
-        <button onclick="checkAnswer()">Adivinar</button>
-
-        <p class="result" id="result"></p>
-      </div>
-
-      <!-- Resultado Final -->
-      <div id="finalResult" style="display: none; margin-top: 20px;">
-        <h3>¡Felicidades! Completaste el juego.</h3>
-        <p>Tu calificación final es: <span id="score">0</span>/5.</p>
-      </div>
+<header class="bg-primary text-white text-center py-4">
+  <div class="container">
+    <h1>¡Vamos a comprobar tus conocimientos!</h1>
+    <!-- Contenedor para los botones -->
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+      <!-- Botón para mostrar el juego -->
+      <button onclick="showGame()" class="btn btn-light mt-4">Mostrar Juego</button>
+      
+      <!-- Botón para ocultar el juego -->
+      <button onclick="hideGame()" class="btn btn-danger mt-4" style="display: none;">Ocultar Juego</button>
     </div>
+  </div>
+</header>
+
+<!-- Sección del Juego que se mostrará al hacer clic -->
+<section id="gameSection" style="display: none; padding-top: 20px;">
+  <!-- Primer iframe (Juego Laberinto) -->
+  <div class="iframe-container" style="width: 100%; padding: 0 10px;">
+    <iframe id="gameIframe" src="Juegos/laberinto.html" style="width: 100%; height: 800px; border: none; border-radius: 8px;"></iframe>
   </div>
 </section>
 
 <script>
-  const protocols = [
-    {
-      description: "Este protocolo se utiliza para la comunicación a través de cables de cobre o fibra óptica en una red LAN.",
-      answer: "Ethernet"
-    },
-    {
-      description: "Este protocolo permite la comunicación inalámbrica en redes LAN mediante ondas de radio.",
-      answer: "Wi-Fi"
-    },
-    {
-      description: "Este protocolo se utiliza para convertir direcciones IP en direcciones MAC dentro de una red local.",
-      answer: "ARP"
-    },
-    {
-      description: "Este protocolo es utilizado para asignar direcciones IP de manera automática a los dispositivos conectados a la red.",
-      answer: "DHCP"
-    },
-    {
-      description: "Este protocolo se utiliza para la resolución de nombres de dominio en direcciones IP, facilitando la navegación web.",
-      answer: "DNS"
-    }
-  ];
-
-  let currentProtocolIndex = 0;
-  let score = 0;
-
-  // Function to display the description of the current protocol
-  function displayDescription() {
-    const protocol = protocols[currentProtocolIndex];
-    document.getElementById('protocol-description').textContent = protocol.description;
-    document.getElementById('result').textContent = ''; // Clear the result text for new question
+  // Función para mostrar el juego al hacer clic en el botón
+  function showGame() {
+    document.getElementById('gameSection').style.display = 'block';
+    document.getElementById('gameSection').scrollIntoView({ behavior: 'smooth' }); // Desplaza hacia el iframe
+    document.querySelector('.btn-light').style.display = 'none'; // Ocultar botón Mostrar Juego
+    document.querySelector('.btn-danger').style.display = 'inline-block'; // Mostrar botón Ocultar Juego
   }
 
-  // Function to check the user's answer
-  function checkAnswer() {
-    const userAnswer = document.getElementById('user-answer').value.trim().toLowerCase();
-    const correctAnswer = protocols[currentProtocolIndex].answer.toLowerCase();
-    const result = document.getElementById('result');
-
-    // Check if the user's answer is correct
-    if (userAnswer === correctAnswer) {
-      result.textContent = "¡Correcto! ¡Bien hecho!";
-      result.className = "result correct";
-      score++;
-    } else {
-      result.textContent = `La respuesta correcta es: ${protocols[currentProtocolIndex].answer}`;
-      result.className = "result incorrect"; // Show the correct answer after wrong attempt
-    }
-
-    // Wait before moving to the next question (2 seconds)
-    setTimeout(() => {
-      currentProtocolIndex++; // Move to the next question
-      if (currentProtocolIndex < protocols.length) {
-        displayDescription(); // Show next description
-      } else {
-        // Show the final result after all questions are answered
-        setTimeout(() => {
-          document.getElementById('finalResult').style.display = 'block';
-          document.getElementById('score').textContent = score;
-        }, 1000);
-      }
-    }, 2000); // Wait for 2 seconds before showing the next question
-
-    document.getElementById('user-answer').value = ''; // Clear input field
+  // Función para ocultar el juego al hacer clic en el botón
+  function hideGame() {
+    document.getElementById('gameSection').style.display = 'none';
+    document.querySelector('.btn-light').style.display = 'inline-block'; // Mostrar botón Mostrar Juego
+    document.querySelector('.btn-danger').style.display = 'none'; // Ocultar botón Ocultar Juego
   }
-
-  // Initial call to display the first protocol description
-  displayDescription();
-
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Obtén la URL actual
-    const currentUrl = window.location.pathname;
-  
-    // Obtén todos los enlaces en el menú
-    const links = document.querySelectorAll('.navitem');
-  
-    // Itera a través de los enlaces y compara su href con la URL actual
-    links.forEach(link => {
-      if (link.href.includes(currentUrl)) {
-        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
-      } else {
-        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
-      }
-    });
-  });
-  
 </script>
+
+<!-- Agregar estilos adicionales -->
+<style>
+  /* Botón estilizado */
+  .btn {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* Botón de Ocultar */
+  .btn-danger {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .btn-danger:hover {
+    background-color: #d32f2f;
+  }
+
+  /* Ajustes para los iframes */
+  .iframe-container {
+    max-width: 1200px; /* Limitar el tamaño máximo del iframe */
+    margin: 0 auto; /* Centrar el iframe */
+  }
+
+  /* Asegurar que los botones están bien alineados */
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+
+  .btn-light:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+</style>
+
+
 
 
 
