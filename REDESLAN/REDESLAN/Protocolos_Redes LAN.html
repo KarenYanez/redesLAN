@@ -273,21 +273,30 @@
         <h4 class="mt-4 text-start">Protocolos:</h4>
         <div class="row">
           <!-- Tarjeta ARP -->
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" >
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8; ">
                 <h5 class="card-title">ARP</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para mapear direcciones de red (IP) a 
+                    direcciones físicas (MAC) dentro de una red local.</p>
+                </div>
               </div>
+              
+              
             </div>
           </div>
 
           <!-- Tarjeta Wi-Fi -->
           <div class="col-md-4 mb-3">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
                 <h5 class="card-title">Wi-Fi</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Utilizado en redes LAN inalámbricas. Define cómo los dispositivos se comunican sin cables, proporcionando una forma de acceder a la red mediante señales de radio.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -296,9 +305,12 @@
           <!-- Tarjeta Ethernet -->
           <div class="col-md-4 mb-3">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
                 <h5 class="card-title">Ethernet</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Define el formato de los paquetes de datos y las reglas de acceso al medio para evitar colisiones.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -320,6 +332,7 @@
         <div class="modal-body text-center">
           <p style="text-align: justify;">La capa de Internet se encarga de dirigir los paquetes de datos de un dispositivo a otro a través de la red, utilizando el protocolo IP (Internet Protocol). Esta capa es responsable del direccionamiento y el enrutamiento de los paquetes de datos, garantizando que lleguen al destino correcto.
 
+
           </p>
 
               <!-- Tarjetas Interactivas de Protocolos -->
@@ -328,9 +341,12 @@
           <!-- Tarjeta ARP -->
           <div class="col-md-6 mb-3">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
                 <h5 class="card-title">IPv4</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <img src="img/direccionip.png" alt="" class="img-fluid" style="width: 100%; height: auto; object-fit: cover;">
+                </div>
               </div>
             </div>
           </div>
@@ -338,9 +354,12 @@
           <!-- Tarjeta Wi-Fi -->
           <div class="col-md-6 mb-3">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
                 <h5 class="card-title">IPv6</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <img src="img/ipv6.png" alt="">                
+                </div>
               </div>
             </div>
           </div>
@@ -352,9 +371,12 @@
           <div class="row">
           <div class="col-md-6 mb-3">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #d6eaf8 ;">
                 <h5 class="card-title">IP Privada</h5>
                 <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Es una dirección IP que se utiliza dentro de una red privada, como una red local (LAN), y no es accesible directamente desde Internet. </p>
+                </div>
               </div>
             </div>
           </div>
@@ -362,9 +384,12 @@
 
         <div class="col-md-6 mb-3">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="background-color: #d6eaf8 ;">
               <h5 class="card-title">IP Pública</h5>
               <p class="card-text"></p>
+              <div class="card-face card-back">
+                <p class="card-text">Es una dirección única asignada a un dispositivo o red que está directamente accesible a través de Internet. </p>
+              </div>
             </div>
           </div>
         </div>
@@ -394,9 +419,12 @@
        <!-- Tarjeta ARP -->
        <div class="col-md-6 6mb-3">
          <div class="card">
-           <div class="card-body">
+           <div class="card-body" style="background-color: #d6eaf8 ;">
              <h5 class="card-title">TCP</h5>
              <p class="card-text"></p>
+             <div class="card-face card-back">
+              <p class="card-text">Es un protocolo orientado a la conexión y confiable. Establece una conexión entre el emisor y el receptor antes de la transmisión de datos.</p>
+            </div>
            </div>
          </div>
        </div>
@@ -404,9 +432,12 @@
        <!-- Tarjeta Wi-Fi -->
        <div class="col-md-6 mb-3">
          <div class="card">
-           <div class="card-body">
+           <div class="card-body" style="background-color: #d6eaf8 ;">
              <h5 class="card-title">UDP</h5>
              <p class="card-text"></p>
+             <div class="card-face card-back">
+              <p class="card-text">UDP envía los datos como datagramas, sin preocuparse por la ordenación ni confirmación. Esto permite una transmisión más rápida, pero también más susceptible a pérdidas o errores en la entrega.</p>
+            </div>
            </div>
          </div>
        </div>
@@ -420,71 +451,114 @@
   </div>
 
   <!-- Modal Capa 4: Capa de Aplicación -->
-  <div class="modal fade" id="modalCapa4" tabindex="-1" aria-labelledby="modalCapa4Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalCapa4Label">🖧 Capa de Aplicación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <p style="text-align: justify;">En esta capa residen los protocolos que interactúan directamente con las 
-            aplicaciones del usuario y proporcionan los servicios necesarios para la comunicación de datos entre los dispositivos.</p>
+<div class="modal fade" id="modalCapa4" tabindex="-1" aria-labelledby="modalCapa4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCapa4Label">🖧 Capa de Aplicación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p style="text-align: justify;">En esta capa residen los protocolos que interactúan directamente con las aplicaciones del usuario y proporcionan los servicios necesarios para la comunicación de datos entre los dispositivos.</p>
 
-          <!-- Ventajas y Desventajas -->
-          <h4 class="mt-4 text-start">Protocolos:</h4>
-          <div class="row">
-            <!-- Tarjeta ARP -->
-            <div class="col-md-3 6mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">HTTP</h5>
-                  <p class="card-text"></p>
+        <!-- Ventajas y Desventajas -->
+        <h4 class="mt-4 text-start">Protocolos:</h4>
+        <div class="row">
+          <!-- Tarjeta HTTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">HTTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Es el protocolo utilizado para la transferencia de páginas web. Cuando accedes a una página en tu navegador, este protocolo se utiliza para enviar solicitudes y recibir respuestas entre tu navegador y el servidor web.</p>
                 </div>
               </div>
             </div>
-     
-            <!-- Tarjeta Wi-Fi -->
-            <div class="col-md-3 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">FTP</h5>
-                  <p class="card-text"></p>
+          </div>
+
+          <!-- Tarjeta FTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">FTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para la transferencia de archivos entre un cliente y un servidor a través de una red. FTP permite a los usuarios subir o descargar archivos desde servidores remotos.</p>
                 </div>
               </div>
             </div>
-        <!-- Tarjeta ARP -->
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">DNS</h5>
-              <p class="card-text"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Tarjeta DNS -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">DNS</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Este protocolo traduce los nombres de dominio legibles por humanos (como www.ejemplo.com) en direcciones IP, que son utilizadas para enrutar paquetes de datos en la red.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta SMTP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body" style="background-color: #d6eaf8;">
+                <h5 class="card-title">SMTP</h5>
+                <p class="card-text"></p>
+                <div class="card-face card-back">
+                  <p class="card-text">Protocolo utilizado para el envío de correos electrónicos entre servidores. Cuando envías un correo desde un cliente de correo, SMTP es el encargado de enviar ese mensaje al servidor de destino.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
- 
-        <!-- Tarjeta Wi-Fi -->
-        <div class="col-md-3 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">SMTP</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-       
-          </div>
 
-
-          
-
-        
-        </div>
       </div>
     </div>
   </div>
+</div>
+
 
 </section>
+<style>
+  .card {
+    perspective: 1000px; /* Para darle profundidad al efecto */
+  }
+  
+  .card-body {
+    transform-style: preserve-3d; /* Necesario para el efecto de rotación */
+    transition: transform 0.5s; /* Duración de la rotación */
+    position: relative;
+  }
+  
+  .card:hover .card-body {
+    transform: rotateY(180deg); /* Gira la tarjeta en el eje Y cuando pasa el mouse */
+  }
+  
+  .card-body .front,
+  .card-body .back {
+    backface-visibility: hidden; /* Para ocultar la parte de atrás cuando está girada */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .card-body .back {
+    transform: rotateY(180deg); /* Coloca la parte de atrás detrás de la parte delantera */
+    background-color: #f0f0f0; /* Puedes agregar un fondo diferente para la parte de atrás */
+    padding: 10px;
+    text-align: center;
+  }
+  
+</style>
 
 <!-- JavaScript to Toggle Details -->
 <script>
@@ -493,6 +567,7 @@
     details.style.display = details.style.display === 'none' ? 'block' : 'none';
   }
 </script>
+
 
 <header class="bg-primary text-white text-center py-4">
   <div class="container">
@@ -509,10 +584,12 @@
 </header>
 
 <!-- Sección del Juego que se mostrará al hacer clic -->
+ 
 <section id="gameSection" style="display: none; padding-top: 20px;">
   <!-- Primer iframe (Juego Laberinto) -->
-  <div class="iframe-container" style="width: 100%; padding: 0 10px;">
-    <iframe id="gameIframe" src="Juegos/laberinto.html" style="width: 100%; height: 800px; border: none; border-radius: 8px;"></iframe>
+  <div class="iframe-container" style="width: 200%; padding: 0 10px;">
+    <br><br><br>
+    <iframe id="gameIframe" src="Juegos/laberinto.html" style="width: 100%; height: 300px; border: none; border-radius: 8px;"></iframe>
   </div>
 </section>
 
@@ -531,6 +608,23 @@
     document.querySelector('.btn-light').style.display = 'inline-block'; // Mostrar botón Mostrar Juego
     document.querySelector('.btn-danger').style.display = 'none'; // Ocultar botón Ocultar Juego
   }
+  document.addEventListener("DOMContentLoaded", function() {
+    // Obtén la URL actual
+    const currentUrl = window.location.pathname;
+  
+    // Obtén todos los enlaces en el menú
+    const links = document.querySelectorAll('.navitem');
+  
+    // Itera a través de los enlaces y compara su href con la URL actual
+    links.forEach(link => {
+      if (link.href.includes(currentUrl)) {
+        link.classList.add('active');  // Añadir la clase 'active' al enlace correspondiente
+      } else {
+        link.classList.remove('active');  // Remover la clase 'active' de los demás enlaces
+      }
+    });
+  });
+  
 </script>
 
 <!-- Agregar estilos adicionales -->
@@ -581,12 +675,6 @@
   }
 </style>
 
-
-
-
-
-
-    </footer>
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i

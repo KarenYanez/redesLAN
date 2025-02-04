@@ -539,24 +539,6 @@
   
   
   
-/* Estilo del contenedor de la información */
-.info-box {
-    display: none; /* Inicialmente oculto */
-    position: absolute; /* Posición absoluta para que se pueda mover */
-    top: 0; /* Se alinea con la parte superior del botón */
-    left: 100%; /* Se coloca a la derecha del botón (100% de su ancho) */
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 130px; /* Puedes ajustar el ancho */
-    margin-left: 10px; /* Espacio entre el botón y el contenedor de información */
-    transition: all 0.3s ease; /* Suaviza la transición */
-
-
-  }
-  
 
 
 
@@ -588,5 +570,4 @@
     text-align: center;
     width: 100%;
   }
-  
   
