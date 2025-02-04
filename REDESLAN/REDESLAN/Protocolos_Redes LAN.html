@@ -214,7 +214,6 @@
   </div>
 </section>
 
-
 <section id="protocolos-lan" class="protocolos-lan section bg-light pt-5 pb-5" style="background: linear-gradient(to right, rgb(255, 255, 255), white);">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
@@ -235,180 +234,170 @@
       <div class="col-md-6">
         <ul class="nav nav-pills flex-column" id="tcp-ip-tabs" role="tablist">
           <li class="nav-item mb-3" role="presentation">
-            <a class="nav-link" id="capas-tab-1" data-bs-toggle="pill" href="#" onclick="openModal('capa1')" role="tab" aria-controls="capa1" aria-selected="true" style="background-color: #f83d8d;">
+            <a class="nav-link" id="capas-tab-1" data-bs-toggle="modal" href="#modalCapa1" role="tab" aria-controls="capa1" aria-selected="true" style="background-color: #f83d8d;">
               <h5>Capa 1: Capa de Acceso a la Red</h5>
             </a>
           </li>
           <li class="nav-item mb-3" role="presentation">
-            <a class="nav-link" id="capas-tab-2" data-bs-toggle="pill" href="#" onclick="openModal('capa2')" role="tab" aria-controls="capa2" aria-selected="false" style="background-color: #5ac872;">
+            <a class="nav-link" id="capas-tab-2" data-bs-toggle="modal" href="#modalCapa2" role="tab" aria-controls="capa2" aria-selected="false" style="background-color: #5ac872;">
               <h5>Capa 2: Capa de Internet</h5>
             </a>
           </li>
           <li class="nav-item mb-3" role="presentation">
-            <a class="nav-link" id="capas-tab-3" data-bs-toggle="pill" href="#" onclick="openModal('capa3')" role="tab" aria-controls="capa3" aria-selected="false" style="background-color: #45a3ff;">
+            <a class="nav-link" id="capas-tab-3" data-bs-toggle="modal" href="#modalCapa3" role="tab" aria-controls="capa3" aria-selected="false" style="background-color: #45a3ff;">
               <h5>Capa 3: Capa de Transporte</h5>
             </a>
           </li>
           <li class="nav-item mb-3" role="presentation">
-            <a class="nav-link" id="capas-tab-4" data-bs-toggle="pill" href="#" onclick="openModal('capa4')" role="tab" aria-controls="capa4" aria-selected="false" style="background-color: #ffbf45;">
+            <a class="nav-link" id="capas-tab-4" data-bs-toggle="modal" href="#modalCapa4" role="tab" aria-controls="capa4" aria-selected="false" style="background-color: #ffbf45;">
               <h5>Capa 4: Capa de Aplicación</h5>
             </a>
           </li>
         </ul>
       </div>
     </div>
-
-    <!-- Modal WWW
-    <div class="modal fade" id="modalWWW" tabindex="-1" aria-labelledby="modalWWWLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalWWWLabel">🌍Capa de Acceso a la Red</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body text-center">
-            <h4 class="mt-3 text-start"></h4>
-            <p style="text-align: justify;">
-            </p>
-
-        
-            <h4 class="mt-4 text-start"></h4>
-            <ul class="text-start">
-      
-            </ul>
-
-            <h4 class="mt-3 text-start"></h4>
-            <ul class="text-start">
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
-  <div class="modal fade" id="modalWWW" tabindex="-1" aria-labelledby="modalWWWLabel" aria-hidden="true">
+
+  <!-- Modal Capa 1: Capa de Acceso a la Red -->
+  <div class="modal fade" id="modalCapa1" tabindex="-1" aria-labelledby="modalCapa1Label" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalWWWLabel">🌍Capa de Internet</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <h5 class="modal-title" id="modalCapa1Label" >🕸️  Capa de Acceso a la Red</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
-          <h4 class="mt-3 text-start"></h4>
-          <p style="text-align: justify;">
-          </p>
+          <p style="text-align: justify;">La capa de acceso a la red se encarga de la transmisión 
+            física de los datos a través del medio de comunicación, ya sea un cable (como en Ethernet) o
+             señales inalámbricas (como en Wi-Fi).</p>
 
-     
-          <h4 class="mt-4 text-start"></h4>
+          <!-- Ventajas y Desventajas -->
+          <h4 class="mt-4 text-start">Ventajas:</h4>
           <ul class="text-start">
-    
+            <li>Ventaja 1 de la capa 1</li>
+            <li>Ventaja 2 de la capa 1</li>
           </ul>
+          ARP 
+          Wi-Fi
+          ARP
 
-          <h4 class="mt-3 text-start"></h4>
+
+
+          <h4 class="mt-3 text-start">Desventajas:</h4>
           <ul class="text-start">
-
+            <li>Desventaja 1 de la capa 1</li>
+            <li>Desventaja 2 de la capa 1</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modalWWW" tabindex="-1" aria-labelledby="modalWWWLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalWWWLabel">🌍Capa de Transporte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <h4 class="mt-3 text-start"></h4>
-        <p style="text-align: justify;">
-        </p>
 
-       
-        <h4 class="mt-4 text-start"></h4>
-        <ul class="text-start">
-  
-        </ul>
+  <!-- Modal Capa 2: Capa de Internet -->
+  <div class="modal fade" id="modalCapa2" tabindex="-1" aria-labelledby="modalCapa2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" >
+          <h5 class="modal-title" id="modalCapa2Label" >📶 Capa de Internet</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="text-align: justify;">La capa de Internet se encarga de dirigir los paquetes de datos de un dispositivo a otro a través de la red, utilizando el protocolo IP (Internet Protocol). Esta capa es responsable del direccionamiento y el enrutamiento de los paquetes de datos, garantizando que lleguen al destino correcto.
 
-        <h4 class="mt-3 text-start"></h4>
-        <ul class="text-start">
 
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="modal fade" id="modalWWW" tabindex="-1" aria-labelledby="modalWWWLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        <h5 class="modal-title" id="modalWWWLabel">🌍Capa de Aplicacion</h5>
-      </div>
-      <div class="modal-body text-center">
-        <h4 class="mt-3 text-start"></h4>
-        <p style="text-align: justify;">
-        </p>
+          </p>
 
-      
-        <h4 class="mt-4 text-start"></h4>
-        <ul class="text-start">
-  
-        </ul>
+          <!-- Ventajas y Desventajas -->
+          <h4 class="mt-4 text-start">Ventajas:</h4>
+          <ul class="text-start">
+            <li>Ventaja 1 de la capa 2</li>
+            <li>Ventaja 2 de la capa 2</li>
+          </ul>
 
-        <h4 class="mt-3 text-start"></h4>
-        <ul class="text-start">
 
-        </ul>
+            IPv4
+            IPv6
+            IP Publica
+            IP privada
+
+
+          <h4 class="mt-3 text-start">Desventajas:</h4>
+          <ul class="text-start">
+            <li>Desventaja 1 de la capa 2</li>
+            <li>Desventaja 2 de la capa 2</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+
+  <!-- Modal Capa 3: Capa de Transporte -->
+  <div class="modal fade" id="modalCapa3" tabindex="-1" aria-labelledby="modalCapa3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h5 class="modal-title" id="modalCapa3Label">💻 Capa de Transporte</h5>
+         
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="text-align: justify;">La capa de transporte asegura que los datos se entreguen de manera fiable entre los dispositivos de una red, 
+            garantizando que la comunicación de extremo a extremo sea adecuada.</p>
+
+          <!-- Ventajas y Desventajas -->
+          <h4 class="mt-4 text-start">Ventajas:</h4>
+          <ul class="text-start">
+            <li>Ventaja 1 de la capa 3</li>
+            <li>Ventaja 2 de la capa 3</li>
+          </ul>
+          TCP
+          UDP
+          <h4 class="mt-3 text-start">Desventajas:</h4>
+          <ul class="text-start">
+            <li>Desventaja 1 de la capa 3</li>
+            <li>Desventaja 2 de la capa 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Capa 4: Capa de Aplicación -->
+  <div class="modal fade" id="modalCapa4" tabindex="-1" aria-labelledby="modalCapa4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCapa4Label">🖧 Capa de Aplicación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="text-align: justify;">En esta capa residen los protocolos que interactúan directamente con las 
+            aplicaciones del usuario y proporcionan los servicios necesarios para la comunicación de datos entre los dispositivos.</p>
+
+          <!-- Ventajas y Desventajas -->
+          <h4 class="mt-4 text-start">Ventajas:</h4>
+          <ul class="text-start">
+            <li>Ventaja 1 de la capa 4</li>
+            <li>Ventaja 2 de la capa 4</li>
+
+
+
+            HTTP
+            FTP
+            DNS 
+            SMTP
+
+          <h4 class="mt-3 text-start">Desventajas:</h4>
+          <ul class="text-start">
+            <li>Desventaja 1 de la capa 4</li>
+            <li>Desventaja 2 de la capa 4</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
-
-
-<script>
-  function openModal(capa) {
-    let modalTitle = document.querySelector("#modalWWWLabel");
-    let modalBody = document.querySelector(".modal-body");
-
-    switch (capa) {
-      case 'capa1':
-        modalTitle.textContent = "🌍 Capa de Acceso a la Red";
-        modalBody.innerHTML = `<p>Información sobre la capa de acceso a la red...</p>`;
-        break;
-      case 'capa2':
-        modalTitle.textContent = "🌍 Capa de Internet";
-        modalBody.innerHTML = `<p>Información sobre la capa de internet...</p>`;
-        break;
-      case 'capa3':
-        modalTitle.textContent = "🌍 Capa de Transporte";
-        modalBody.innerHTML = `<p>Información sobre la capa de transporte...</p>`;
-        break;
-      case 'capa4':
-        modalTitle.textContent = "🌍 Capa de Aplicación";
-        modalBody.innerHTML = `<p>Información sobre la capa de aplicación...</p>`;
-        break;
-      default:
-        modalTitle.textContent = "🌍 World Wide Web (WWW)";
-        modalBody.innerHTML = `<p>Contenido por defecto de WWW...</p>`;
-    }
-
-    // Abre el modal
-    var myModal = new bootstrap.Modal(document.getElementById('modalWWW'));
-    myModal.show();
-  }
-</script>
- -->
-
-
-
-
-
 
 <!-- JavaScript to Toggle Details -->
 <script>
