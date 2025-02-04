@@ -95,79 +95,35 @@
         <li><a href="Protocolos_Redes LAN.html" class="navitem"><i class="bi bi-plug navicon"></i> Protocolos de Comunicación</a></li>
         <li><a href="seguridad.html" class="navitem"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
         <li><a href="Juegos.html" class="navitem"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
-        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i> Ejemplos y Ejercicios</a></li>
+        <li><a href="Ejercicio.html" class="navitem"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
       </ul>
     </nav>
     
   </header>
   <main class="main">
-
-    
-<!-- Asistente star -->
-
-<!--Modal  -->
-
-<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-      <div class="modal-content mb-0 ">
-          
-        <div class="container">
-          <div class="row">
-            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
-            
-            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
-              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
-            </div>
-          </div>
-
-          <div class="row">
-            <div class=" col-lg-1 col-md-1 mt-3 pr-0">
-              <img src="assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
-            </div>
-            <div class=" col-lg-11 col-md-11  pl-0">
-              <div class="modal-body mb-0" id="responseText"></div>
-            </div>
-          </div>
-        </div> 
-      </div>
-     
-  </div>
-</div>  
-<!--Moda END -->
-
-<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
-
-<div  id="questionMenu" class="speech-bubble card">
-<ul class="list-group list-group-flush" id="questionList">
-  <!-- Preguntas generadas dinámicamente -->
-</ul>
-</div>
-
-<!-- Asistente end -->
-
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Redes</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-      <!-- Enlace Inicio 
-      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
+
 
       <!-- Menú Programación -->
       <div class="nav-item dropdown">
-        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
+        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+          data-bs-toggle="dropdown">Programación</a>
         <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-            class="dropdown-item small-text">Algoritmos</a>
+          <a href="../../Contenido_Programacion/Principal.html"
+            class="dropdown-item small-text">I. Algoritmos</a>
           <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-            class="dropdown-item small-text">Diagramas</a>
+            class="dropdown-item small-text">II. Diagramas</a>
           <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-            class="dropdown-item small-text">Python</a>
+            class="dropdown-item small-text">III. Python</a>
         </div>
       </div>
 
@@ -175,47 +131,38 @@
       <div class="nav-item dropdown">
         <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
         <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
-          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
-          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios de
+            conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+            Lan</a>
+            <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+            class="dropdown-item small-text">III. Internet</a>
 
         </div>
       </div>
 
       <!-- Menú Base de Datos -->
       <div class="nav-item dropdown">
-        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
+        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+          Datos</a>
         <div class="dropdown-menu fade-down m-0">
           <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
-            class="dropdown-item small-text">Access</a>
-          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-            class="dropdown-item small-text">MySQL (Workbench)</a>
-          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
+            class="dropdown-item small-text">I. Access</a>
+            <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html"
+            class="dropdown-item small-text">II. Visual
             Basic Access</a>
+          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+            class="dropdown-item small-text">III. MySQL (Workbench)</a>
+
         </div>
       </div>
 
-      </div>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="#about" class="dropdown-item">Internet</a>
-          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
-          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
-          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
-          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
-          <a href="#contact" class="dropdown-item">Backbone</a>
-        </div>
-      </div>
-
-      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
-
-    </div>
-    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
+  </div>
+  <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+      class="fa fa-arrow-right ms-3"></i></a>
   </div>
 </nav>
 <!-- Navbar End -->
-
     <!-- About Section -->
     <section id="about" class="about section">
       <!-- Section Title -->
@@ -820,82 +767,77 @@
 
 <!-- Services Section -->
 
+<!-- Skills Section -->
+<section id="services" class="skills section"
+  style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Ejemplo en Cisco Packet Tracer</h2>
+    <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
+      opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
+    <p><strong>DESARROLLO</strong></p>
+    <p><strong>IP del router:</strong> 192.168.1.0</p>
+    <p><strong>IP PC0:</strong> 192.168.1.2</p>
+    <p><strong>IP PC1:</strong> 192.168.1.3</p>
 
-    <!-- Skills Section -->
-    <section id="services" class="skills section"
-      style="background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); color: #333;">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Ejemplo en Cisco Packet Tracer</h2>
-        <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
-          opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
-        <p><strong>DESARROLLO</strong></p>
-        <p><strong>IP del router:</strong> 192.168.1.0</p>
-        <p><strong>IP PC0:</strong> 192.168.1.2</p>
-        <p><strong>IP PC1:</strong> 192.168.1.3</p>
-    
-        <!-- Botón para mostrar/ocultar el video -->
-        <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
-    
-        <!-- Contenedor del video oculto por defecto -->
-        <div id="videoContainer" style="display: none; margin-top: 10px;">
-          <video width="600" controls>
-            <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
+    <!-- Botón para mostrar/ocultar el video -->
+    <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
+
+    <!-- Contenedor del video oculto por defecto -->
+    <div id="videoContainer" style="display: none; margin-top: 10px;">
+      <video width="600" controls>
+        <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <h4 class="title"><a class="stretched-link">Componentes</a></h4>
+          <img src="./img/corre.png" alt="Alta Velocidad" class="img-fluid service-img">
         </div>
-      </div><!-- End Section Title -->
-    
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div>
-              <h4 class="title"><a class="stretched-link">Componentes</a></h4>
-              <img src="./img/componentes.png" alt="Alta Velocidad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div>
-              <h4 class="title"><a class="stretched-link">Esquema</a></h4>
-              <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div>
-              <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
-              <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div>
-              <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
-              <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div>
-              <h4 class="title"><a class="stretched-link">Configuración del CP0</a></h4>
-              <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div>
-              <h4 class="title"><a class="stretched-link">Configuración del CP1</a></h4>
-              <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
-            </div>
-          </div><!-- End Service Item -->
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <h4 class="title"><a class="stretched-link">Esquema</a></h4>
+          <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
         </div>
-      </div>
-      
-    </section><!-- /Skills Section -->
+      </div><!-- End Service Item -->
 
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
+          <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
+        </div>
+      </div><!-- End Service Item -->
 
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
+          <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <h4 class="title"><a class="stretched-link">Configuración del PC0</a></h4>
+          <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <h4 class="title"><a class="stretched-link">Configuración del PC1</a></h4>
+          <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
+        </div>
+      </div><!-- End Service Item -->
+    </div>
+  </div>
   
-</section><!-- /Services Section -->
+</section><!-- /Skills Section -->
 
 <script>
   document.getElementById('toggleVideoBtn').addEventListener('click', function () {
@@ -914,11 +856,13 @@
     padding: 20px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+    text-align: center;
   }
 
   .service-item:hover {
     background-color: #000;
     color: #fff;
+    animation: bounce 1s ease;
   }
 
   .service-item:hover .icon i {
@@ -941,9 +885,46 @@
   .service-item:hover h4 a {
     color: #ffcc00;
   }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
 </style>
 
- 
+
+     <!-- Section Content -->
+     <div class="container-fluid"
+     style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 50px; overflow: hidden;">
+     <!-- Video de Fondo -->
+     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+       <video autoplay loop muted style="width: 100%; height: 100%; object-fit: cover;">
+         <source src="./img/video_fondo.mp4" type="video/mp4">
+         Tu navegador no soporta videos HTML5.
+       </video>
+     </div>
+     <!-- Contenido de la Sección -->
+     <div class="section-title" data-aos="fade-up"
+       style="position: relative; z-index: 2; background: rgba(0, 0, 0, 0.5); padding: 50px; border-radius: 15px; display: inline-block;">
+       <!-- Ícono de Juego -->
+       <div style="font-size: 4rem; margin-bottom: 20px;">
+         🎮
+       </div>
+       <!-- Texto y Botón -->
+       <h2 style="color: white;">¡Bienvenido al Aprendizaje Dinámico!</h2>
+       <p>Explora nuevas habilidades de manera interactiva y divertida.</p>
+       <a href="guardado/Juegos/Juego1.html" class="btn btn-primary btn-lg"
+         style="font-size: 1.5rem; padding: 1rem 2rem;">¡Empecemos a Aprender!</a>
+     </div>
+   </div>
+
 
 
   </main>
