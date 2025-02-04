@@ -102,7 +102,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>REDES</h2>
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -192,7 +192,7 @@
               <img src="img/wifi.jpg" alt="Satélites Inteligentes" class="future-img">
               <div class="p-3 text-center">
                 <h5 class="text-success">Wi-Fi (IEEE 802.11)</h5>
-                <br>
+          
                     <p>Protocolo estándar para redes LAN inalámbricas que permite la transmisión de datos sin cables, usando ondas de radio.</p>
               </div>
             </div>
@@ -259,39 +259,55 @@
   </div>
 
   <!-- Modal Capa 1: Capa de Acceso a la Red -->
-  <div class="modal fade" id="modalCapa1" tabindex="-1" aria-labelledby="modalCapa1Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalCapa1Label" >🕸️  Capa de Acceso a la Red</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="modalCapa1" tabindex="-1" aria-labelledby="modalCapa1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCapa1Label">🕸️ Capa de Acceso a la Red</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p style="text-align: justify;">La capa de acceso a la red se encarga de la transmisión física de los datos a través del medio de comunicación, ya sea un cable (como en Ethernet) o señales inalámbricas (como en Wi-Fi).</p>
+
+             <!-- Tarjetas Interactivas de Protocolos -->
+        <h4 class="mt-4 text-start">Protocolos:</h4>
+        <div class="row">
+          <!-- Tarjeta ARP -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">ARP</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta Wi-Fi -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wi-Fi</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puedes agregar más tarjetas aquí -->
+          <!-- Tarjeta Ethernet -->
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Ethernet</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body text-center">
-          <p style="text-align: justify;">La capa de acceso a la red se encarga de la transmisión 
-            física de los datos a través del medio de comunicación, ya sea un cable (como en Ethernet) o
-             señales inalámbricas (como en Wi-Fi).</p>
 
-          <!-- Ventajas y Desventajas -->
-          <h4 class="mt-4 text-start">Ventajas:</h4>
-          <ul class="text-start">
-            <li>Ventaja 1 de la capa 1</li>
-            <li>Ventaja 2 de la capa 1</li>
-          </ul>
-          ARP 
-          Wi-Fi
-          ARP
-
-
-
-          <h4 class="mt-3 text-start">Desventajas:</h4>
-          <ul class="text-start">
-            <li>Desventaja 1 de la capa 1</li>
-            <li>Desventaja 2 de la capa 1</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Modal Capa 2: Capa de Internet -->
   <div class="modal fade" id="modalCapa2" tabindex="-1" aria-labelledby="modalCapa2Label" aria-hidden="true">
@@ -304,28 +320,57 @@
         <div class="modal-body text-center">
           <p style="text-align: justify;">La capa de Internet se encarga de dirigir los paquetes de datos de un dispositivo a otro a través de la red, utilizando el protocolo IP (Internet Protocol). Esta capa es responsable del direccionamiento y el enrutamiento de los paquetes de datos, garantizando que lleguen al destino correcto.
 
-
           </p>
 
-          <!-- Ventajas y Desventajas -->
-          <h4 class="mt-4 text-start">Ventajas:</h4>
-          <ul class="text-start">
-            <li>Ventaja 1 de la capa 2</li>
-            <li>Ventaja 2 de la capa 2</li>
-          </ul>
+              <!-- Tarjetas Interactivas de Protocolos -->
+        <h4 class="mt-4 text-start">Direcciones IP:</h4>
+        <div class="row">
+          <!-- Tarjeta ARP -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">IPv4</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Tarjeta Wi-Fi -->
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">IPv6</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- Puedes agregar más tarjetas aquí -->
+          <!-- Tarjeta Ethernet -->
 
-            IPv4
-            IPv6
-            IP Publica
-            IP privada
+          <h4 class="mt-4 text-start">Tipos de IP:</h4>
+          <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">IP Privada</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        
 
+        <div class="col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">IP Pública</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <h4 class="mt-3 text-start">Desventajas:</h4>
-          <ul class="text-start">
-            <li>Desventaja 1 de la capa 2</li>
-            <li>Desventaja 2 de la capa 2</li>
-          </ul>
+ 
         </div>
       </div>
     </div>
@@ -343,20 +388,32 @@
         <div class="modal-body text-center">
           <p style="text-align: justify;">La capa de transporte asegura que los datos se entreguen de manera fiable entre los dispositivos de una red, 
             garantizando que la comunicación de extremo a extremo sea adecuada.</p>
+     <!-- Tarjetas Interactivas de Protocolos -->
+     <h4 class="mt-4 text-start">Protocolos:</h4>
+     <div class="row">
+       <!-- Tarjeta ARP -->
+       <div class="col-md-6 6mb-3">
+         <div class="card">
+           <div class="card-body">
+             <h5 class="card-title">TCP</h5>
+             <p class="card-text"></p>
+           </div>
+         </div>
+       </div>
 
-          <!-- Ventajas y Desventajas -->
-          <h4 class="mt-4 text-start">Ventajas:</h4>
-          <ul class="text-start">
-            <li>Ventaja 1 de la capa 3</li>
-            <li>Ventaja 2 de la capa 3</li>
-          </ul>
-          TCP
-          UDP
-          <h4 class="mt-3 text-start">Desventajas:</h4>
-          <ul class="text-start">
-            <li>Desventaja 1 de la capa 3</li>
-            <li>Desventaja 2 de la capa 3</li>
-          </ul>
+       <!-- Tarjeta Wi-Fi -->
+       <div class="col-md-6 mb-3">
+         <div class="card">
+           <div class="card-body">
+             <h5 class="card-title">UDP</h5>
+             <p class="card-text"></p>
+           </div>
+         </div>
+       </div>
+
+  
+     </div>
+    
         </div>
       </div>
     </div>
@@ -375,23 +432,53 @@
             aplicaciones del usuario y proporcionan los servicios necesarios para la comunicación de datos entre los dispositivos.</p>
 
           <!-- Ventajas y Desventajas -->
-          <h4 class="mt-4 text-start">Ventajas:</h4>
-          <ul class="text-start">
-            <li>Ventaja 1 de la capa 4</li>
-            <li>Ventaja 2 de la capa 4</li>
+          <h4 class="mt-4 text-start">Protocolos:</h4>
+          <div class="row">
+            <!-- Tarjeta ARP -->
+            <div class="col-md-3 6mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">HTTP</h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+     
+            <!-- Tarjeta Wi-Fi -->
+            <div class="col-md-3 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">FTP</h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+        <!-- Tarjeta ARP -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">DNS</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Tarjeta Wi-Fi -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">SMTP</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+       
+          </div>
 
 
+          
 
-            HTTP
-            FTP
-            DNS 
-            SMTP
-
-          <h4 class="mt-3 text-start">Desventajas:</h4>
-          <ul class="text-start">
-            <li>Desventaja 1 de la capa 4</li>
-            <li>Desventaja 2 de la capa 4</li>
-          </ul>
+        
         </div>
       </div>
     </div>
